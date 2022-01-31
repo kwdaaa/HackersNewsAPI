@@ -21,5 +21,5 @@ for i in range(len(top30url)):
     # 1秒待ってね。
     time.sleep(1)
     # 出力
-    print(f"'title': {title}, 'link': {url}")
-    
+    print(f"{{'title': '{title}', 'link': '{url}'}}")
+   
