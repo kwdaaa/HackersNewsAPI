@@ -1,0 +1,10 @@
+・トップページに表示されている30件のidを取得。(下記URLに500件掲載されているので上位30件分取得。）
+>> https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty
+
+・URLにidを突っ込んで各ニュースのjsonデータを取得。
+>> https://hacker-news.firebaseio.com/v0/item/{id}}.json?print=pretty
+
+・jsonデータの"title"と"url"を取得。
+>> https://hacker-news.firebaseio.com/v0/item/30144229.json?print=pretty
+
+・{'title': xxxxxxxxxxxxxxxxx, 'link': xxxxxxxxxxxxxxxxxx)}を表示させる。
