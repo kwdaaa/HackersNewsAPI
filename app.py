@@ -22,3 +22,4 @@ for i in range(len(top30url)):
     time.sleep(1)
     # 出力
     print(f"'title': {title}, 'link': {url}")
+    
