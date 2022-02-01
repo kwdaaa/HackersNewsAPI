@@ -6,9 +6,9 @@ top30id = requests.get('https://hacker-news.firebaseio.com/v0/topstories.json?pr
 
 # 30記事のidを入れる空の配列を定義。
 top30url = []
-
+top = 5
 # 30記事のid情報が入った配列「top30id」を30回繰り返し、idに入れ、30個のurlを生成する。それを配列「top30url」に追加。
-for id in top30id.json()[0:30]:
+for id in top30id.json()[0:top]:
     top30url.append(f"https://hacker-news.firebaseio.com/v0/item/{id}.json?print=pretty")
 
 for i in range(len(top30url)):
