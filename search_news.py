@@ -16,16 +16,23 @@ def search_news(top):
     for i in range(len(top30url)):
         # 各記事の情報を取得し、変数「response」に定義。
         response = requests.get(top30url[i])
-        # 1秒待ってね。
-        time.sleep(1)
+        # インライン化
         dic = response.json()
+        # さっきAPI叩いたから1秒待とうね。
+        time.sleep(1)
         # 「'title'」の情報を変数「title」に定義。
         title = dic['title']
+        # さっきAPI叩いたから1秒待とうね。
+        time.sleep(1)
         # 「'url'」の情報を変数「url」に定義。
         if 'url' in dic:
             url = dic['url']
         else:
             url = ""
+
+        result = {}
+        result['title'] = title
+        result['link'] = url
         # 追加
-        news.append(f"'title': '{title}', 'link': '{url}'")
+        news.append(result)
     return news
